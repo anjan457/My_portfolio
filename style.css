@@ -381,10 +381,15 @@ form .btn2 {
 }
 
 /* ------------------- css for small screens----------- */
+nav .fas {
+    display: none;
+}
+
 @media screen and (max-width: 600px) {
     #header {
-        background-image: url(images/phone.png);
+        background-image: url(images/phone-background.png);
     }
+
 
     .header-text {
         margin-top: 100%;
@@ -396,18 +401,34 @@ form .btn2 {
         font-size: 30px;
     }
 
-    nav.fas {
+    nav .fas {
         display: block;
         font-size: 25px;
     }
 
     nav ul {
-        background: #ff004f;
+        background: #ff000000;
         position: fixed;
         top: 0;
-        right: 0;
+        right: -200px;
         width: 200px;
         height: 100vh;
         padding-top: 50px;
+        z-index: 2;
+
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+
+    }
+
+    nav ul .fas {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+
     }
 }
